@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import Navbar from './components/Navbar/index.jsx'
+import Hero from './components/Hero/index.jsx'
+import Card from './components/Card/index.jsx'
+import Footer from './components/Footer/index.jsx'
 import './App.css';
+import dataList from './data'
 
 function App() {
+
+  const cards = dataList.map((item) => {
+    return <Card 
+              key={item.id}
+              {...item}
+              // img = {item.coverImg}
+              // title = {item.title}
+              // rating = {item.stats.rating}
+              // reviewCount = {item.stats.reviewCount}
+              // price = {item.price}
+              // location = {item.location}
+              // description = {item.description}
+              // openSpots = {item.openSpots}
+            />
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Hero />
+      <section className='cards-list'>
+        {cards}  
+      </section> 
+      <Footer />
     </div>
-  );
+  
+    )
 }
 
 export default App;

@@ -1,0 +1,28 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hero--photo {
+    max-width: 700px;
+    align-self: center;
+  }
+
+  .hero--alignCenter {
+    align-self: center;
+  }
+  
+  .hero--header {
+    color: #FF5A5F;
+    margin-bottom: 16px;
+  }
+  
+  .hero--text {
+    margin-top: 0;
+  }
+
+
+  .hr--gray {
+    border: 3px solid rgba(255,95,95,0.5) /*#ff5a5f*/;
+    border-radius: 3px;
+  }
